@@ -1,13 +1,13 @@
-const redis = require("redis");
-const publisher = redis.createClient();
+const redis = require('redis')
+const publisher = redis.createClient()
 
-const channel = "status";
+const channel = 'status'
 
 async function publish() {
-  await publisher.connect();
+  await publisher.connect()
 
-  console.log(`Started ${channel} channel publisher...`);
-  publisher.publish(channel, "free");
+  console.log(`Started ${channel} channel publisher...`)
+  publisher.publish(channel, 'free')
   //     try {
   //       try {
   //         await publisher.get("users").then((data) => {
@@ -36,4 +36,4 @@ async function publish() {
   //   });
 }
 
-publish();
+publish()
